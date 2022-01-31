@@ -2,13 +2,14 @@ name: PR Branch Build and Test
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - '*' 
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - run: echo "${{ github.ref }}"
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
