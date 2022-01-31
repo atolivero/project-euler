@@ -2,5 +2,3 @@
 Houses the code to create solutions for problems from the [Project Euler](https://projecteuler.net/).
 
 yo
-
-yo again
