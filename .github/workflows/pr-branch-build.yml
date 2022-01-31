@@ -1,0 +1,16 @@
+name: PR Branch Build and Test
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - run: git checkout HEAD^2
+      - run: echo "${{ github.ref }}"
